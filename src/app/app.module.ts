@@ -17,6 +17,7 @@ import { EstadosComponent } from './components/module/estados/estados.component'
 import { PlanetasComponent } from './components/module/planetas/planetas.component';
 import { TecnicasComponent } from './components/module/tecnicas/tecnicas.component';
 import { EpisodiosComponent } from './components/module/episodios/episodios.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { EpisodiosComponent } from './components/module/episodios/episodios.comp
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
