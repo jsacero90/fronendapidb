@@ -1,0 +1,21 @@
+<h1 class="mt-3" style="text-align: center;">Noticias</h1>
+<hr>
+<div *ngFor="let noticia of dataNoticias" class="pservices text-justify">
+    <div class="col-md-12" style="text-align: center">
+        <img class="img-fluid" [src]="noticia.urlToImage" alt="imagen" width="60%">
+        <br>
+    </div>
+    <div class="col-md-12">
+        <h5>{{ noticia.title }}</h5>
+        <p>{{ noticia.content }}</p>
+        <a [href]="noticia.url" target="__blank">Pagina Fuente</a><br>
+        <small><strong>fecha:</strong>{{ noticia.publishedAt | date}} <br>
+          <strong>Autor:</strong>{{ noticia.author }}</small>
+    </div>
+    <br>
+    <hr>
+</div>
+
+
+
+
