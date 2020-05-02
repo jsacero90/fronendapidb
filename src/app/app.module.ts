@@ -3,12 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './componets/header/header.component';
-import { FooterComponent } from './componets/footer/footer.component';
-import { PnoticiasComponent } from './componets/pnoticias/pnoticias.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PnoticiasComponent } from './components/pnoticias/pnoticias.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { BodyComponent } from './componets/body/body.component';
+import { BodyComponent } from './components/body/body.component';
+import { InicioComponent } from './components/module/inicio/inicio.component';
+import { PersonajesComponent } from './components/module/personajes/personajes.component';
+import { ObjetosComponent } from './components/module/objetos/objetos.component';
+import { RazasComponent } from './components/module/razas/razas.component';
+import { EstadosComponent } from './components/module/estados/estados.component';
+import { PlanetasComponent } from './components/module/planetas/planetas.component';
+import { TecnicasComponent } from './components/module/tecnicas/tecnicas.component';
+import { EpisodiosComponent } from './components/module/episodios/episodios.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +24,15 @@ import { BodyComponent } from './componets/body/body.component';
     HeaderComponent,
     FooterComponent,
     PnoticiasComponent,
-    BodyComponent
+    BodyComponent,
+    InicioComponent,
+    PersonajesComponent,
+    ObjetosComponent,
+    RazasComponent,
+    EstadosComponent,
+    PlanetasComponent,
+    TecnicasComponent,
+    EpisodiosComponent
   ],
   imports: [
     BrowserModule,

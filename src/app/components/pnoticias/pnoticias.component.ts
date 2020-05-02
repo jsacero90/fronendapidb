@@ -1,4 +1,4 @@
-import { NoticiasService } from './../../services/noticias.service';
+import { NoticiasService } from '../../services/noticias.service';
 import { Component, OnInit } from '@angular/core';
 
 
