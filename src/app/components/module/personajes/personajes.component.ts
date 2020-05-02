@@ -1,4 +1,6 @@
+import { ConexiondbService } from './../../../services/conexiondb.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-personajes',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonajesComponent implements OnInit {
 
-  constructor() { }
+  personajes: any;
+  constructor(private servicioApi: ConexiondbService ) { }
 
   ngOnInit() {
+    this.getPersonajes();
   }
 
+  getPersonajes() {
+    this.servicioApi.getPersonajes().subscribe(datos => {
+      console.log(datos);
+      this.personajes = datos;
+    });
+  }
 }

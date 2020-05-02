@@ -1,3 +1,4 @@
+import { PersonajeComponent } from './components/module/personajes/personaje/personaje.component';
 import { TecnicasComponent } from './components/module/tecnicas/tecnicas.component';
 import { RazasComponent } from './components/module/razas/razas.component';
 import { PlanetasComponent } from './components/module/planetas/planetas.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'planetas', component: PlanetasComponent},
   { path: 'razas', component: RazasComponent},
   { path: 'tecnicas', component: TecnicasComponent},
+  { path: 'personaje/:Id', component: PersonajeComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 

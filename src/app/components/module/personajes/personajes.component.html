@@ -1,1 +1,19 @@
-<p>personajes works!</p>
+<div class="card-columns">
+
+  <div class="card text-center puntero" *ngFor="let personaje of personajes" [routerLink]="['/personaje',personaje.Id]">
+    <img [src]="personaje.Imagen" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{personaje.Nombre}}</h5>
+      <p class="card-text">
+        <small>{{personaje.Sexo}}</small>
+        <br>
+        <small>{{personaje.Raza}}</small>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
