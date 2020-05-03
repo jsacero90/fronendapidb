@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'razas', component: RazasComponent},
   { path: 'tecnicas', component: TecnicasComponent},
   { path: 'personaje/:Id', component: PersonajeComponent},
+  { path: 'tecnica/:Id', component: PersonajeComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 

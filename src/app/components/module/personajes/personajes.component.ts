@@ -18,7 +18,7 @@ export class PersonajesComponent implements OnInit {
 
   getPersonajes() {
     this.servicioApi.getPersonajes().subscribe(datos => {
-      console.log(datos);
+      // console.log(datos);
       this.personajes = datos;
     });
   }
