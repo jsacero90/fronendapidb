@@ -1,5 +1,7 @@
+import { LodingService } from './../../../services/loding.service';
 import { ConexiondbService } from './../../../services/conexiondb.service';
 import { Component, OnInit } from '@angular/core';
+
 
 
 @Component({
@@ -10,9 +12,11 @@ import { Component, OnInit } from '@angular/core';
 export class TecnicasComponent implements OnInit {
 
   tecnicas: any;
-  constructor(private serviceConexion: ConexiondbService) { }
+  constructor(private serviceConexion: ConexiondbService,
+              private loding: LodingService) { }
 
   ngOnInit() {
+    this.loding.iniciarLoding();
     this.getTecnicas();
   }
 
@@ -31,6 +35,7 @@ export class TecnicasComponent implements OnInit {
             Imagen: datos.find(s => s.Nombre_Tecnica === Nombre_Tecnica).Imagen,
         };
     });
+    this.loding.stopLoding();
     return resultado;
   }
 }
