@@ -1,0 +1,24 @@
+<div class="row mt-3">
+    <div class="col-xs-12 col-lg-8">
+      <button type="button" class="btn btn-secondary "[routerLink]="['/estados']"> < Atras</button>
+      <h3 class="mt-4"> {{estado.Nombre_Estado}}</h3>
+      <p>   {{estado.Descripcion}}   </p>
+      <h4> Personaje </h4>
+      <ul><li>{{estado.Nombre_Personaje}}</li></ul>
+    </div>
+
+    <div class="col-xs-12 col-lg-4">
+
+        <div class="card text-center lg-mr-3">
+            <img [src]="estado.Imagen" class="rounded mx-auto d-block mt-5" width="50%" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{estado.Nombre_Estado}}</h5>
+
+            </div>
+          </div>
+
+
+    </div>
+
+
+</div>
