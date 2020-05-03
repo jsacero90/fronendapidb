@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5c40709c-ca35-4950-b462-c96a2d793d3a/resourceGroups/ArqSoftware/providers/Microsoft.Web/sites/apifansdb",
+    "appService.deploySubpath": "dist/fronendapidb"
+}

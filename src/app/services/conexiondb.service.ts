@@ -23,13 +23,15 @@ getQuery(query: string) {
   getEpisodios() {
     return this.getQuery('api/episodios');
   }
-  /*getTopTracks(id: string) {
-    return this.getQuery(`artists/${id}/top-tracks?country=us`)
-    .pipe(map(data => data['tracks']));
-  }*/
 
   getPersonajes() {
     return this.getQuery('api/personajes').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
+  }
+
+  getTecnicas() {
+    return this.getQuery('api/tecnicas').pipe(
       // tslint:disable-next-line: no-string-literal
       map(datos => datos['data']));
   }
