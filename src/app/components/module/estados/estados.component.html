@@ -1,1 +1,9 @@
-<p>estados works!</p>
+<div class="card-columns mt-5">
+  <div class="card text-center puntero" *ngFor="let estado of estados" [routerLink]="['/estado',estado.Id]">
+    <img [src]="estado.Imagen" class="rounded mx-auto d-block mt-5" width="60%" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{estado.Nombre_Estado}}</h5>
+    </div>
+  </div>
+</div>
+

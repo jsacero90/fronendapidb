@@ -10,6 +10,7 @@ import { InicioComponent } from './components/module/inicio/inicio.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.component';
+import { EstadoComponent } from './components/module/estados/estado/estado.component';
 
 
 const routes: Routes = [
@@ -21,8 +22,10 @@ const routes: Routes = [
   { path: 'planetas', component: PlanetasComponent},
   { path: 'razas', component: RazasComponent},
   { path: 'tecnicas', component: TecnicasComponent},
+  { path: 'estados', component: EstadosComponent},
   { path: 'personaje/:Id', component: PersonajeComponent},
   { path: 'tecnica/:Id', component: TecnicaComponent},
+  { path: 'estado/:Id', component: EstadoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 
