@@ -6,6 +6,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ConexiondbService {
+  getIds(url: string) {
+    throw new Error("Method not implemented.");
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -35,4 +38,15 @@ getQuery(query: string) {
       // tslint:disable-next-line: no-string-literal
       map(datos => datos['data']));
   }
-}
+  }
+
+  getEstados() {
+    return this.getQuery('api/estados').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
+  }
+
+
+
+
+

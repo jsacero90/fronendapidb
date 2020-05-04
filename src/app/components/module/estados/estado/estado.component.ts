@@ -27,7 +27,7 @@ export class EstadoComponent implements OnInit {
    });
   }
 
-  getIdUrl() {
+  getIdUrl(){
     return this.router.snapshot.paramMap.get('Id');
 
   }
