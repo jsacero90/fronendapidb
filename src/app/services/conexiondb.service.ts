@@ -1,3 +1,4 @@
+import { Routes } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -38,6 +39,7 @@ getQuery(query: string) {
       // tslint:disable-next-line: no-string-literal
       map(datos => datos['data']));
   }
+
   }
 
   getEstados(); {
@@ -45,10 +47,6 @@ getQuery(query: string) {
       // tslint:disable-next-line: no-string-literal
       map(datos => datos['data']));
   }
-
-
-
-
 
 
 
