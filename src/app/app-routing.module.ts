@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'tecnicas', component: TecnicasComponent},
   { path: 'personaje/:Id', component: PersonajeComponent},
   { path: 'tecnica/:Id', component: PersonajeComponent},
+  { path: 'estado/:Id', component: PersonajeComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 
