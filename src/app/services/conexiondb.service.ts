@@ -1,3 +1,4 @@
+import { Routes } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -34,5 +35,11 @@ getQuery(query: string) {
     return this.getQuery('api/tecnicas').pipe(
       // tslint:disable-next-line: no-string-literal
       map(datos => datos['data']));
+  }
+
+  getIds( routes: string) {
+    return this.getQuery(routes).pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos[0]));
   }
 }
