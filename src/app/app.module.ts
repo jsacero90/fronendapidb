@@ -50,7 +50,6 @@ import { RazaComponent } from './components/module/razas/raza/raza.component';
     EstadoComponent,
     ObjetoComponent,
     RazaComponent
-
   ],
   imports: [
     BrowserModule,
