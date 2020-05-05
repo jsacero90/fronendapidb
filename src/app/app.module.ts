@@ -23,6 +23,7 @@ import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.c
 import { EpisodioComponent } from './components/module/episodios/episodio/episodio.component';
 import { EstadoComponent } from './components/module/estados/estado/estado.component';
 import { ObjetoComponent } from './components/module/objetos/objeto/objeto.component';
+import { RazaComponent } from './components/module/razas/raza/raza.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ObjetoComponent } from './components/module/objetos/objeto/objeto.compo
     TecnicaComponent,
     EpisodioComponent,
     EstadoComponent,
-    ObjetoComponent
+    ObjetoComponent,
+    RazaComponent
   ],
   imports: [
     BrowserModule,
