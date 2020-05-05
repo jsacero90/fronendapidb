@@ -26,7 +26,6 @@ import { ObjetoComponent } from './components/module/objetos/objeto/objeto.compo
 import { RazaComponent } from './components/module/razas/raza/raza.component';
 
 
-import { EstadoComponent } from './components/module/estados/estado/estado.component';
 
 
 @NgModule({
@@ -51,7 +50,7 @@ import { EstadoComponent } from './components/module/estados/estado/estado.compo
     EstadoComponent,
     ObjetoComponent,
     RazaComponent
-    EstadoComponent
+
   ],
   imports: [
     BrowserModule,
