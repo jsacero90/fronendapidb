@@ -1,6 +1,10 @@
+
 import { ConexiondbService } from './../../../services/conexiondb.service';
 import { LodingService } from './../../../services/loding.service';
+
 import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-estados',
@@ -10,11 +14,13 @@ import { Component, OnInit } from '@angular/core';
 export class EstadosComponent implements OnInit {
 
   estados: any;
+
   constructor(private lodding: LodingService,
               private serviceApi: ConexiondbService) { }
 
   ngOnInit() {
     this.lodding.iniciarLoding();
+
     this.getEstados();
   }
 

@@ -1,9 +1,9 @@
 
+
 import { Component, OnInit } from '@angular/core';
 import { LodingService } from '../../../../services/loding.service';
 import { ConexiondbService } from '../../../../services/conexiondb.service';
 import { ActivatedRoute } from '@angular/router';
-
 
 @Component({
   selector: 'app-estado',
@@ -12,15 +12,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EstadoComponent implements OnInit {
 
+
   estados: any;
   constructor(private serviceApi: ConexiondbService,
               private lodding: LodingService,
               private router: ActivatedRoute) { }
 
+
   ngOnInit() {
     this.lodding.iniciarLoding();
     this.getEstado(this.getId());
   }
+
 
   getId() {
     return this.router.snapshot.paramMap.get('Id');
@@ -35,3 +38,4 @@ export class EstadoComponent implements OnInit {
   }
 
 }
+

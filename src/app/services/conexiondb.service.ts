@@ -7,6 +7,11 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ConexiondbService {
+  getEstados() {
+    return this.getQuery('api/estados').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -62,5 +67,5 @@ getQuery(query: string) {
       // tslint:disable-next-line: no-string-literal
       map(datos => datos[0]));
   }
-
+  
 }

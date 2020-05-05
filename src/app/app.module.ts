@@ -26,6 +26,9 @@ import { ObjetoComponent } from './components/module/objetos/objeto/objeto.compo
 import { RazaComponent } from './components/module/razas/raza/raza.component';
 
 
+import { EstadoComponent } from './components/module/estados/estado/estado.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +43,7 @@ import { RazaComponent } from './components/module/razas/raza/raza.component';
     EstadosComponent,
     PlanetasComponent,
     TecnicasComponent,
+    EstadosComponent,
     EpisodiosComponent,
     PersonajeComponent,
     TecnicaComponent,
@@ -47,6 +51,7 @@ import { RazaComponent } from './components/module/razas/raza/raza.component';
     EstadoComponent,
     ObjetoComponent,
     RazaComponent
+    EstadoComponent
   ],
   imports: [
     BrowserModule,

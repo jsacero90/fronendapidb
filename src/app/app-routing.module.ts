@@ -25,12 +25,14 @@ const routes: Routes = [
   { path: 'planetas', component: PlanetasComponent},
   { path: 'razas', component: RazasComponent},
   { path: 'tecnicas', component: TecnicasComponent},
+  { path: 'estados', component: EstadosComponent},
   { path: 'personaje/:Id', component: PersonajeComponent},
   { path: 'tecnica/:Id', component: TecnicaComponent},
   { path: 'episodio/:Id', component: EpisodioComponent},
   { path: 'estado/:Id', component: EstadoComponent},
   { path: 'objeto/:Id', component: ObjetoComponent},
   { path: 'raza/:Id', component: RazaComponent},
+  { path: 'estado/:Id', component: EstadoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 
