@@ -20,6 +20,8 @@ import { EpisodiosComponent } from './components/module/episodios/episodios.comp
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { PersonajeComponent } from './components/module/personajes/personaje/personaje.component';
 import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.component';
+import { EpisodioComponent } from './components/module/episodios/episodio/episodio.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.c
     TecnicasComponent,
     EpisodiosComponent,
     PersonajeComponent,
-    TecnicaComponent
+    TecnicaComponent,
+    EpisodioComponent
   ],
   imports: [
     BrowserModule,

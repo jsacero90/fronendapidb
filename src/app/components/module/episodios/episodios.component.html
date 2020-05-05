@@ -1,1 +1,9 @@
-<p>episodios works!</p>
+<div class="card-columns mt-5">
+  <div class="card text-center puntero" *ngFor="let episodio of episodios" [routerLink]="['/episodio',episodio.idEpisodio]">
+    <img [src]="episodio.Imagen" class="rounded mx-auto d-block mt-5" width="60%" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{episodio.Nombre}}</h5>
+    </div>
+  </div>
+</div>
+

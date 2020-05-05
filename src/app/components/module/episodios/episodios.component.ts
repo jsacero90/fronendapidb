@@ -1,4 +1,7 @@
+import { LodingService } from './../../../services/loding.service';
 import { Component, OnInit } from '@angular/core';
+import { ConexiondbService } from 'src/app/services/conexiondb.service';
+
 
 @Component({
   selector: 'app-episodios',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EpisodiosComponent implements OnInit {
 
-  constructor() { }
+  episodios: any;
+  constructor(private serviceApi: ConexiondbService,
+              private lodding: LodingService) { }
 
   ngOnInit() {
+    this.lodding.iniciarLoding();
+    this.getEpisosdios();
+  }
+
+  getEpisosdios() {
+    this.serviceApi.getEpisodios().subscribe(data => {
+      this.episodios = data;
+      this.lodding.stopLoding();
+    });
   }
 
 }

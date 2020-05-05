@@ -22,7 +22,9 @@ getQuery(query: string) {
 }
 
   getEpisodios() {
-    return this.getQuery('api/episodios');
+    return this.getQuery('api/episodios').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
   }
 
   getPersonajes() {
@@ -42,4 +44,5 @@ getQuery(query: string) {
       // tslint:disable-next-line: no-string-literal
       map(datos => datos[0]));
   }
+
 }

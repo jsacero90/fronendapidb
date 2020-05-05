@@ -1,0 +1,21 @@
+<div class="row mt-5">
+  <div class="col-lg-8 col-xs-12">
+    <button type="button" class="btn btn-secondary btn-sm" [routerLink]="['/episodios']"><strong>< Atras</strong></button>
+    <h3 class="mt-3">{{episodio.Nombre }}</h3>
+    <p> {{episodio.Descripcion}} </p>
+  </div>
+  <div class="col-lg-4 col-xs-12">
+    <div class="card text-center mr-lg-3" >
+      <img [src]="episodio.Imagen" class="rounded mx-auto d-block mt-5" width="70%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{episodio.Nombre}}</h5>
+        <p class=" card-text text-left">
+          <small>Saga:</small> {{episodio.Saga}}<br>
+          <small>Número:</small> {{episodio.Numero}}<br>
+          <small>Fecha:</small> {{episodio.Fecha}}
+        </p>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
