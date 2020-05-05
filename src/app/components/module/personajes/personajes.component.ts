@@ -1,5 +1,7 @@
+import { LodingService } from './../../../services/loding.service';
 import { ConexiondbService } from './../../../services/conexiondb.service';
 import { Component, OnInit } from '@angular/core';
+
 
 
 @Component({
@@ -10,9 +12,11 @@ import { Component, OnInit } from '@angular/core';
 export class PersonajesComponent implements OnInit {
 
   personajes: any;
-  constructor(private servicioApi: ConexiondbService ) { }
+  constructor(private servicioApi: ConexiondbService,
+              private servicioLoad: LodingService ) { }
 
   ngOnInit() {
+    this.servicioLoad.iniciarLoding();
     this.getPersonajes();
   }
 
@@ -20,6 +24,7 @@ export class PersonajesComponent implements OnInit {
     this.servicioApi.getPersonajes().subscribe(datos => {
       // console.log(datos);
       this.personajes = datos;
+      this.servicioLoad.stopLoding();
     });
   }
 }
