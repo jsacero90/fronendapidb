@@ -11,6 +11,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.component';
 import { EpisodioComponent } from './components/module/episodios/episodio/episodio.component';
+import { EstadoComponent } from './components/module/estados/estado/estado.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'personaje/:Id', component: PersonajeComponent},
   { path: 'tecnica/:Id', component: TecnicaComponent},
   { path: 'episodio/:Id', component: EpisodioComponent},
+  { path: 'estado/:Id', component: EstadoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 
