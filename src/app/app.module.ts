@@ -22,6 +22,7 @@ import { PersonajeComponent } from './components/module/personajes/personaje/per
 import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.component';
 import { EpisodioComponent } from './components/module/episodios/episodio/episodio.component';
 import { EstadoComponent } from './components/module/estados/estado/estado.component';
+import { ObjetoComponent } from './components/module/objetos/objeto/objeto.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { EstadoComponent } from './components/module/estados/estado/estado.compo
     PersonajeComponent,
     TecnicaComponent,
     EpisodioComponent,
-    EstadoComponent
+    EstadoComponent,
+    ObjetoComponent
   ],
   imports: [
     BrowserModule,

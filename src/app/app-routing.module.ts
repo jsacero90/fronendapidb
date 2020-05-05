@@ -1,3 +1,4 @@
+import { ObjetoComponent } from './components/module/objetos/objeto/objeto.component';
 import { PersonajeComponent } from './components/module/personajes/personaje/personaje.component';
 import { TecnicasComponent } from './components/module/tecnicas/tecnicas.component';
 import { RazasComponent } from './components/module/razas/razas.component';
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'tecnica/:Id', component: TecnicaComponent},
   { path: 'episodio/:Id', component: EpisodioComponent},
   { path: 'estado/:Id', component: EstadoComponent},
+  { path: 'objeto/:Id', component: ObjetoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 

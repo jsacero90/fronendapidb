@@ -1,0 +1,20 @@
+<div class="row mt-5">
+  <div class="col-lg-8 col-xs-12">
+    <button type="button" class="btn btn-secondary btn-sm" [routerLink]="['/objetos']"><strong>< Atras</strong></button>
+    <h3 class="mt-3">{{objeto.Nombre_Objeto }}</h3>
+    <p> {{objeto.Descripcion}} </p>
+    <strong>Personaje que lo usa</strong>
+    <ul>
+      <li *ngFor="let personaje of personajes" >{{ personaje.Nombre_Personaje }}</li>
+    </ul>
+  </div>
+  <div class="col-lg-4 col-xs-12">
+    <div class="card text-center mr-lg-3" >
+      <img [src]="objeto.Imagen" class="rounded mx-auto d-block mt-5" width="70%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{objeto.Nombre_Objeto}}</h5>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>

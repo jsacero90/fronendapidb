@@ -45,6 +45,12 @@ getQuery(query: string) {
       map(datos => datos['data']));
   }
 
+  getObjetos() {
+    return this.getQuery('api/objetos').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
+  }
+
   getIds( routes: string) {
     return this.getQuery(routes).pipe(
       // tslint:disable-next-line: no-string-literal
