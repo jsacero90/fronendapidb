@@ -1,1 +1,8 @@
-<p>objetos works!</p>
+<div class="card-columns mt-5">
+  <div class="card text-center puntero" *ngFor="let objeto of objetos" [routerLink]="['/objeto',objeto.Id]">
+    <img [src]="objeto.Imagen" class="rounded mx-auto d-block mt-5" width="60%" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{objeto.Nombre_Objeto}}</h5>
+    </div>
+  </div>
+</div>

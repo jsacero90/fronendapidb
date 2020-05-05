@@ -1,41 +1,37 @@
-
-
 import { Component, OnInit } from '@angular/core';
-import { LodingService } from '../../../../services/loding.service';
 import { ConexiondbService } from '../../../../services/conexiondb.service';
+import { LodingService } from '../../../../services/loding.service';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
-  selector: 'app-estado',
-  templateUrl: './estado.component.html',
-  styleUrls: ['./estado.component.scss']
+  selector: 'app-episodio',
+  templateUrl: './episodio.component.html',
+  styleUrls: ['./episodio.component.scss']
 })
-export class EstadoComponent implements OnInit {
+export class EpisodioComponent implements OnInit {
 
-
-  estados: any;
+  episodio: any;
   constructor(private serviceApi: ConexiondbService,
               private lodding: LodingService,
               private router: ActivatedRoute) { }
 
-
   ngOnInit() {
     this.lodding.iniciarLoding();
-    this.getEstado(this.getId());
+    this.getEpisosdio(this.getId());
   }
-
 
   getId() {
     return this.router.snapshot.paramMap.get('Id');
   }
 
-  getEstado( id: string ) {
-    const url = `/api/estados/${id}`;
+  getEpisosdio( id: string) {
+    const url = `/api/episodios/${id}`;
     this.serviceApi.getIds(url).subscribe(data => {
-      this.estados = data;
+      this.episodio = data;
       this.lodding.stopLoding();
+      console.log(data);
     });
   }
 
 }
-

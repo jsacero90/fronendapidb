@@ -27,7 +27,9 @@ getQuery(query: string) {
 }
 
   getEpisodios() {
-    return this.getQuery('api/episodios');
+    return this.getQuery('api/episodios').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
   }
 
   getPersonajes() {
@@ -42,11 +44,28 @@ getQuery(query: string) {
       map(datos => datos['data']));
   }
 
+  getEstados() {
+    return this.getQuery('api/estados').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
+  }
+
+  getObjetos() {
+    return this.getQuery('api/objetos').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
+  }
+
+  getRazas() {
+    return this.getQuery('api/razas').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
+  }
+
   getIds( routes: string) {
     return this.getQuery(routes).pipe(
       // tslint:disable-next-line: no-string-literal
       map(datos => datos[0]));
   }
-
-
+  
 }

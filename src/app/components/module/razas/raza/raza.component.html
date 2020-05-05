@@ -1,0 +1,21 @@
+<div class="row mt-5">
+  <div class="col-lg-8 col-xs-12">
+    <button type="button" class="btn btn-secondary btn-sm" [routerLink]="['/razas']"><strong>< Atras</strong></button>
+    <h3 class="mt-3">{{raza.Nombre_Raza }}</h3>
+    <p> {{raza.Descripcion}} </p>
+    <strong>Personajes</strong>
+    <ul>
+      <li *ngFor="let personaje of personajes" >{{ personaje.Nombre }}</li>
+    </ul>
+  </div>
+  <div class="col-lg-4 col-xs-12">
+    <div class="card text-center mr-lg-3" >
+      <img [src]="raza.Imagen" class="rounded mx-auto d-block mt-5" width="70%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{raza.Nombre_Raza}}</h5>
+        <h6 >Planeta: <small>{{raza.Planeta_Origen}}</small></h6>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>

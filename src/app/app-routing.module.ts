@@ -1,3 +1,5 @@
+import { RazaComponent } from './components/module/razas/raza/raza.component';
+import { ObjetoComponent } from './components/module/objetos/objeto/objeto.component';
 import { PersonajeComponent } from './components/module/personajes/personaje/personaje.component';
 import { TecnicasComponent } from './components/module/tecnicas/tecnicas.component';
 import { RazasComponent } from './components/module/razas/razas.component';
@@ -10,6 +12,7 @@ import { InicioComponent } from './components/module/inicio/inicio.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.component';
+import { EpisodioComponent } from './components/module/episodios/episodio/episodio.component';
 import { EstadoComponent } from './components/module/estados/estado/estado.component';
 
 
@@ -25,6 +28,10 @@ const routes: Routes = [
   { path: 'estados', component: EstadosComponent},
   { path: 'personaje/:Id', component: PersonajeComponent},
   { path: 'tecnica/:Id', component: TecnicaComponent},
+  { path: 'episodio/:Id', component: EpisodioComponent},
+  { path: 'estado/:Id', component: EstadoComponent},
+  { path: 'objeto/:Id', component: ObjetoComponent},
+  { path: 'raza/:Id', component: RazaComponent},
   { path: 'estado/:Id', component: EstadoComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 

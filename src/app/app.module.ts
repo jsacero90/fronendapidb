@@ -20,7 +20,14 @@ import { EpisodiosComponent } from './components/module/episodios/episodios.comp
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { PersonajeComponent } from './components/module/personajes/personaje/personaje.component';
 import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.component';
+import { EpisodioComponent } from './components/module/episodios/episodio/episodio.component';
 import { EstadoComponent } from './components/module/estados/estado/estado.component';
+import { ObjetoComponent } from './components/module/objetos/objeto/objeto.component';
+import { RazaComponent } from './components/module/razas/raza/raza.component';
+
+
+import { EstadoComponent } from './components/module/estados/estado/estado.component';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +47,10 @@ import { EstadoComponent } from './components/module/estados/estado/estado.compo
     EpisodiosComponent,
     PersonajeComponent,
     TecnicaComponent,
+    EpisodioComponent,
+    EstadoComponent,
+    ObjetoComponent,
+    RazaComponent
     EstadoComponent
   ],
   imports: [

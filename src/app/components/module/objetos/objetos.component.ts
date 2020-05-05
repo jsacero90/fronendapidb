@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConexiondbService } from './../../../services/conexiondb.service';
+import { LodingService } from './../../../services/loding.service';
 
 @Component({
   selector: 'app-objetos',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObjetosComponent implements OnInit {
 
-  constructor() { }
+  objetos: any;
+  constructor(private lodding: LodingService,
+              private serviceApi: ConexiondbService) { }
 
   ngOnInit() {
+    this.lodding.iniciarLoding();
+    this.getObjetos();
+  }
+
+  getObjetos() {
+    this.serviceApi.getObjetos().subscribe(data => {
+      this.objetos = data;
+      this.lodding.stopLoding();
+    });
   }
 
 }

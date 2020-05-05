@@ -1,18 +1,14 @@
 <div class="row mt-5">
   <div class="col-lg-8 col-xs-12">
     <button type="button" class="btn btn-secondary btn-sm" [routerLink]="['/estados']"><strong>< Atras</strong></button>
-    <h3 class="mt-3">{{estado.Nombre_Estado }}</h3>
-    <p> {{estado.Descripcion}} </p>
-    <strong>Personaje que la realizan</strong>
-    <ul>
-      <li *ngFor="let personaje of personajes" >{{ personaje.Nombre_Personaje }}</li>
-    </ul>
+    <h3 class="mt-3">{{estados.Nombre_Estado }}</h3>
+    <p> {{estados.Descripcion}} </p>
   </div>
   <div class="col-lg-4 col-xs-12">
     <div class="card text-center mr-lg-3" >
-      <img [src]="estado.Imagen" class="rounded mx-auto d-block mt-5" width="70%" alt="...">
+      <img [src]="estados.Imagen" class="rounded mx-auto d-block mt-5" width="70%" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{estado.Nombre_Estado}}</h5>
+        <h5 class="card-title">{{estados.Nombre_Estado}}</h5>
       </div>
     </div>
     <br>
