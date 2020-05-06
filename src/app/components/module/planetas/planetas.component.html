@@ -1,1 +1,9 @@
-<p>planetas works!</p>
+<div class="card-columns mt-5">
+  <div class="card text-center puntero" *ngFor="let planeta of planetas" [routerLink]="['/planeta',planeta.idPlaneta]">
+    <img [src]="planeta.Imagen" class="rounded mx-auto d-block mt-5" width="60%" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{planeta.Nombre}}</h5>
+    </div>
+  </div>
+</div>
+

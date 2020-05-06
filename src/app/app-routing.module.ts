@@ -14,6 +14,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TecnicaComponent } from './components/module/tecnicas/tecnica/tecnica.component';
 import { EpisodioComponent } from './components/module/episodios/episodio/episodio.component';
 import { EstadoComponent } from './components/module/estados/estado/estado.component';
+import { PlanetaComponent } from './components/module/planetas/planeta/planeta.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'objeto/:Id', component: ObjetoComponent},
   { path: 'raza/:Id', component: RazaComponent},
   { path: 'estado/:Id', component: EstadoComponent},
+  { path: 'planeta/:Id', component: PlanetaComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConexiondbService } from './../../../services/conexiondb.service';
+import { LodingService } from './../../../services/loding.service';
 
 @Component({
   selector: 'app-planetas',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetasComponent implements OnInit {
 
-  constructor() { }
+  planetas: any;
+  constructor(private lodding: LodingService,
+              private serviceApi: ConexiondbService) { }
 
   ngOnInit() {
+    this.lodding.iniciarLoding();
+    this.getPlanetas();
+  }
+
+  getPlanetas() {
+    this.serviceApi.getPlanetas().subscribe(data => {
+      this.planetas = data;
+      this.lodding.stopLoding();
+    });
   }
 
 }

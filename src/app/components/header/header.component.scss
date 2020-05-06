@@ -2,4 +2,48 @@
   .hidden {
     font-size: 0;
   }
+  .borderBtnI{
+    border-top-left-radius: 100px 100px !important;
+    border-bottom-left-radius: 100px 100px !important;
+  }
+  .borderBtnD{
+    border-top-right-radius: 100px 100px !important;
+    border-bottom-right-radius: 100px 100px !important;
+  }
+  .btmockup {
+    background-color: #aa671d;
+    color: #f7fade !important;
+    border-color: #f7fade !important;
+    padding: 5px;
+    height: 37px;
+    margin-top: 6px;
+  }
 }
+
+input[type=search] {
+  width: 80%;
+  border-top-right-radius: 100px 100px !important;
+  border-bottom-right-radius: 100px 100px !important;
+  border-top-left-radius: 100px 100px !important;
+  border-bottom-left-radius: 100px 100px !important;
+}
+
+@media (max-width: 991px) {
+  .sMokus{
+    background-color: #ffa834 !important;
+    text-align: left !important;
+    color: 000000;
+  }
+
+  .active {
+    color: white !important;
+  }
+
+  input[type=search] {
+    position: relative;
+    display: block;
+    margin : 0 auto;
+  }
+}
+
+

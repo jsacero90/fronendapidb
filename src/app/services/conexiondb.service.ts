@@ -57,6 +57,12 @@ getQuery(query: string) {
       map(datos => datos['data']));
   }
 
+  getPlanetas() {
+    return this.getQuery('api/planetas').pipe(
+      // tslint:disable-next-line: no-string-literal
+      map(datos => datos['data']));
+  }
+
   getIds( routes: string) {
     return this.getQuery(routes).pipe(
       // tslint:disable-next-line: no-string-literal

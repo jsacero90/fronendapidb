@@ -24,6 +24,7 @@ import { EpisodioComponent } from './components/module/episodios/episodio/episod
 import { EstadoComponent } from './components/module/estados/estado/estado.component';
 import { ObjetoComponent } from './components/module/objetos/objeto/objeto.component';
 import { RazaComponent } from './components/module/razas/raza/raza.component';
+import { PlanetaComponent } from './components/module/planetas/planeta/planeta.component';
 
 
 
@@ -49,7 +50,8 @@ import { RazaComponent } from './components/module/razas/raza/raza.component';
     EpisodioComponent,
     EstadoComponent,
     ObjetoComponent,
-    RazaComponent
+    RazaComponent,
+    PlanetaComponent
   ],
   imports: [
     BrowserModule,
