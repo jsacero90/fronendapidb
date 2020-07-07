@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "12"
+sudo: required
+# usa docker
+services:
+  - docker
+#intalación de dependecncias
+before_script:
+  - npm install
+#inicialización de pruebas
+script:
+  - npm test
+  - docker build -t dockerangular .
+# Logueo en docker
+after_success:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  - docker tag frondangular $DOCKER_USER/frondangular:$TRAVIS_BUILD_NUMBER
+  - docker push $DOCKER_USER/frondangular:$TRAVIS_BUILD_NUMBER
+  - docker tag frondangular $DOCKER_USER/frondangular:latest
+  - docker push $DOCKER_USER/frondangular:latest
+  
